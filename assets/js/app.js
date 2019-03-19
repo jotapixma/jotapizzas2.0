@@ -65,9 +65,7 @@ var app = new Vue({
     },
     agregarIngrediente: function(ingrediente){
       
-      
       this.selectedPizza.ingredientes.push(ingrediente);
-
       
       var cantIngred = this.cantidad++;
       
@@ -128,8 +126,8 @@ var app = new Vue({
       }).length;
     },
     sumarPrecio(){
-      this.precioTotal = 0;
-      for (ingredient of this.selectedIngredients){
+      this.precioTotal = parseInt(this.selectedPizza.precioBase);
+      for (ingredient of this.selectedPizza.ingredientes){
         this.precioTotal = this.precioTotal + parseInt(ingredient.precio)   ;
       }
       return this.precioTotal;
@@ -142,7 +140,6 @@ var app = new Vue({
         "bg-danger": deliciosidad > 66.66
       }
     }
-    
   }
   
 });
