@@ -1,0 +1,64 @@
+section.partners{ background-color: white;
+
+  // Arrows
+  $arrow-height: 17px;
+  $arrow-width: 10px;
+  .slick-arrow{
+    height:38px; 
+    width:38px; 
+    border-radius:38px; box-shadow: 0 0 11px 0 black; background-image:none; 
+    text-indent:10000px;
+    display:block;
+    overflow:hidden;
+    position:absolute; 
+    top:50%; @include transform(translateY(-50%)); border:0;z-index:20; cursor:pointer; outline:none;
+    &:before{content:""; position: absolute; background:url(('/assets/images/ic_arrow-slider.svg')) no-repeat 0 0; width: $arrow-width; height: $arrow-height; z-index: 200;  background-position-y:-17px; top: 50%; @include transform(translateY(-50%)); left:15px;  }
+
+    // &:hover{}
+    &.slick-prev{left:-50px;
+      &:before { @include transform(scaleX(-1) translateY(-50%));}
+    }
+    &.slick-next{right:-50px;}
+    
+    @include media-breakpoint-down(md) {
+      &.slick-prev{left: -40px;}
+      &.slick-next{right: -40px;}
+    }
+    @include media-breakpoint-down(sm) {
+      &.slick-prev{left: 0;}
+      &.slick-next{right: 0;}
+    }
+  }
+  .brand-slider{ display: none;
+
+    &.slick-slider{display:block; 
+      .slick-track{padding: 20px 0; display: flex; align-items: center;
+        .slick-slide{height: auto;}
+      }
+    }//close-slick-slider
+  } //close-brand-slider
+  
+  @include media-breakpoint-down(md){
+    .brand-item{
+      .img{
+        max-width: 260px; margin: 0 auto; 
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .brand-item{
+      .img{
+        max-width: 250px; margin: 0 auto; 
+      }
+    }
+  }
+  
+  @include media-breakpoint-down(xs){
+    .brand-item{
+      .img{
+        max-width: 200px; margin: 0 auto; 
+      }
+    }
+  }
+
+} //close-partners

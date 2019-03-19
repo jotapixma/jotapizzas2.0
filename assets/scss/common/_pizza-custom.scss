@@ -1,0 +1,136 @@
+section.pizzas-custom {
+  .items-container {
+    .right-side {
+      .detalle-pizza-container {
+        padding-top: 30px;
+      }
+      .detalle-pizza {
+        border: 1px solid black;
+        height: 100%;
+        padding: 20px;
+      }
+    }
+    .detalle-pizza h6 {
+      text-align: center;
+    }
+    .detalle-pizza-container .detalle-pizza {
+      border: 1px solid black;
+      height: 100%;
+      padding: 15px;
+    }
+  }
+  .panel-pizza {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    .img {
+      max-width: 360px;
+      display: none;
+    }
+  }
+}
+
+.pizzas-custom {
+  /* background: url("../images/pizza-wallpaper.png"); */
+  padding: 50px 0 90px 0;
+  background-size: cover;
+  .panel-select-cant .left-side {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      input {
+        width: 30px;
+        text-align: center;
+      }
+    }
+    .img {
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      &.med {
+        max-height: 80px;
+        margin: 0 auto;
+      }
+      &.big {
+        max-height: 90px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .items-container {
+    .left-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .right-side {
+      display: flex;
+      align-items: center;
+      .ingredients-panel .ingredient {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .header-info {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .items-container .right-side .ingredients-panel .img {
+    height: 100px;
+    text-align: center;
+    img {
+      max-height: 90px;
+    }
+  }
+}
+
+section.pizzas-custom .items-container {
+  .img img {}
+  .right-side .btn-section {
+    text-align: center;
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+section.pizzas-custom .left-side .container-barra {
+  height: 100%;
+  width: 50px;
+  border: 2px solid black;
+  position: relative;
+  .barra-deliciosidad {
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: green;
+    bottom: 0;
+  }
+}
+
+
+#pizza {
+  animation: bobble 8s infinite;
+}
+
+@keyframes bobble {
+  0% {
+    /* transform: translateY(10px); */
+    transform: rotate(0deg);
+  }
+
+  50% {
+    /* transform: translateY(40px); */
+    transform: rotate(180deg);
+  }
+
+  100% {
+    /* transform: translateY(10px); */
+    transform: rotate(360deg);
+  }
+}

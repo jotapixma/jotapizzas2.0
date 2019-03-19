@@ -1,0 +1,17 @@
+
+section.ingredientes {
+  /*display:none; */
+  padding: 50px 0;
+  background-color: black;
+  .ingredient-item {
+    width: 33%;
+    overflow-x: hidden;
+  }
+  .img {
+    max-height: 180px;
+    overflow-y: hidden;
+    min-width: 320px;
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,428 @@
+body {
+  overflow-x: hidden;
+}
+
+/*** Mixins ***/
+section.pizzas-custom .items-container .right-side .detalle-pizza-container {
+  padding-top: 30px;
+}
+
+section.pizzas-custom .items-container .right-side .detalle-pizza {
+  border: 1px solid black;
+  height: 100%;
+  padding: 20px;
+}
+
+section.pizzas-custom .items-container .detalle-pizza h6 {
+  text-align: center;
+}
+
+section.pizzas-custom .items-container .detalle-pizza-container .detalle-pizza {
+  border: 1px solid black;
+  height: 100%;
+  padding: 15px;
+}
+
+section.pizzas-custom .panel-pizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 30px;
+}
+
+section.pizzas-custom .panel-pizza .img {
+  max-width: 360px;
+  display: none;
+}
+
+.pizzas-custom {
+  /* background: url("../images/pizza-wallpaper.png"); */
+  padding: 50px 0 90px 0;
+  background-size: cover;
+}
+
+.pizzas-custom .panel-select-cant .left-side ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pizzas-custom .panel-select-cant .left-side ul input {
+  width: 30px;
+  text-align: center;
+}
+
+.pizzas-custom .panel-select-cant .left-side .img {
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pizzas-custom .panel-select-cant .left-side img.med {
+  max-height: 80px;
+  margin: 0 auto;
+}
+
+.pizzas-custom .panel-select-cant .left-side img.big {
+  max-height: 90px;
+  margin: 0 auto;
+}
+
+.pizzas-custom .items-container .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pizzas-custom .items-container .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pizzas-custom .items-container .right-side .ingredients-panel .ingredient {
+  margin-bottom: 20px;
+}
+
+.pizzas-custom .header-info {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.pizzas-custom .items-container .right-side .ingredients-panel .img {
+  height: 100px;
+  text-align: center;
+}
+
+.pizzas-custom .items-container .right-side .ingredients-panel .img img {
+  max-height: 90px;
+}
+
+section.pizzas-custom .items-container .right-side .btn-section {
+  text-align: center;
+}
+
+section.pizzas-custom .items-container .right-side .btn-section .btn {
+  display: block;
+  margin: 0 auto;
+}
+
+section.pizzas-custom .left-side .container-barra {
+  height: 100%;
+  width: 50px;
+  border: 2px solid black;
+  position: relative;
+}
+
+section.pizzas-custom .left-side .container-barra .barra-deliciosidad {
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  background-color: green;
+  bottom: 0;
+}
+
+#pizza {
+  -webkit-animation: bobble 8s infinite;
+          animation: bobble 8s infinite;
+}
+
+@-webkit-keyframes bobble {
+  0% {
+    /* transform: translateY(10px); */
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    /* transform: translateY(40px); */
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    /* transform: translateY(10px); */
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes bobble {
+  0% {
+    /* transform: translateY(10px); */
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    /* transform: translateY(40px); */
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    /* transform: translateY(10px); */
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+section.pizzas {
+  /*display:none; */
+  background-color: black;
+  padding: 50px 0;
+}
+
+section.pizzas .card-deck {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.pizzas .card-deck .card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
+  margin: 0 5px;
+  margin-bottom: 20px;
+}
+
+section.pizzas .card-deck .card .card-body {
+  position: relative;
+  padding: 0.5rem;
+}
+
+section.pizzas .card-deck .card .card-body .card-title {
+  margin-bottom: 0.25rem;
+}
+
+section.pizzas .card-deck .card .card-body .circle-price {
+  height: 55px;
+  width: 55px;
+  border-radius: 55px;
+  background-color: red;
+  position: absolute;
+  right: 1px;
+  top: -28px;
+  color: white;
+  z-index: 2;
+}
+
+section.pizzas .card-deck .card .card-body .circle-price span {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+section.pizzas .card-deck .card .card-body .circle-price .mini-circle {
+  height: 51px;
+  width: 51px;
+  border-radius: 51px;
+  background-color: red;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border: 2px solid yellow;
+  z-index: -1;
+}
+
+section.ingredientes {
+  /*display:none; */
+  padding: 50px 0;
+  background-color: black;
+}
+
+section.ingredientes .ingredient-item {
+  width: 33%;
+  overflow-x: hidden;
+}
+
+section.ingredientes .img {
+  max-height: 180px;
+  overflow-y: hidden;
+  min-width: 320px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url(Gibson-Regular.ttf);
+}
+
+body {
+  background-color: red;
+}
+
+/*Navegador*/
+nav.bg-custom {
+  background-color: black;
+}
+
+section .title {
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+section.bg-black .title {
+  color: white;
+}
+
+/*Generic components*/
+.team-card {
+  text-align: center;
+}
+
+.team-card .card-body .img {
+  width: 130px;
+  margin: 0 auto;
+}
+
+.team-card .card-body .img img {
+  border-radius: 130px;
+}
+
+.team-card .card-body .text-card .name {
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.team-card .card-body .text-card p {
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+
+/*section.ingredientes .ingredient-item .img img{
+  max-height:180px; overflow-y:hidden;  
+}
+*/
+/*PIZZA CUSTOM*/
+#ingredient {
+  -webkit-animation: floatitem 4s infinite;
+          animation: floatitem 4s infinite;
+}
+
+@-webkit-keyframes floatitem {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes floatitem {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+.progress-bar-vertical {
+  width: 100%;
+  height: 100% !important;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  /* margin-right: 20px; */
+  float: left;
+  border-radius: 0 !important;
+}
+
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+  -webkit-transition: height 0.6s ease;
+  transition: height 0.6s ease;
+}
+
+.carousel.slide .carousel-inner .carousel-item {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.carousel.slide .carousel-inner .carousel-item img {
+  background-size: cover;
+  background-position: center;
+}
+
+section.animation-jotapizzas .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.team {
+  padding: 50px 0;
+}
+
+section.history {
+  padding: 50px 0;
+  background-color: black;
+}
+
+/*Section History*/
+footer {
+  background-color: black;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+footer p span {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

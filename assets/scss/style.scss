@@ -1,0 +1,185 @@
+// body {
+//   background-color: #fbc547;
+//   color: #333;
+//   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+//     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+//     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+//     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+//   padding: 18vh 1rem;
+//   text-align: center;
+// }
+
+body{
+  // background-color:black; 
+  overflow-x:hidden;
+  p{} 
+  h3.title{ }
+  li{}
+  h6{}
+  h5{ }
+}
+
+@import './common/custom-mixins';
+@import './common/pizza-custom';
+@import './common/tipo-pizza';
+@import './common/ingredientes-section';
+
+// @import './bootstrap/bootstrap-grid';
+
+@font-face {
+font-family: 'Gibson';
+src: url(Gibson-Regular.ttf);
+}
+
+// //componentes genericos
+
+body {
+  background-color: red;
+}
+
+/*Navegador*/
+
+nav.bg-custom {
+  background-color: black;
+}
+
+section {
+  .title {
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  &.bg-black .title {
+    color: white;
+  }
+}
+
+/*Generic components*/
+
+.team-card {
+  text-align: center;
+  .card-body {
+    .img {
+      width: 130px;
+      margin: 0 auto;
+      img {
+        border-radius: 130px;
+      }
+    }
+    .text-card {
+      .name {
+        margin-bottom: 0;
+        padding-top: 15px;
+      }
+      p {
+        margin-bottom: 0;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+
+
+/*section.ingredientes .ingredient-item .img img{
+  max-height:180px; overflow-y:hidden;  
+}
+*/
+
+/*PIZZA CUSTOM*/
+
+#ingredient {
+  animation: floatitem 4s infinite;
+}
+
+@keyframes floatitem {
+  0% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+
+.progress-bar-vertical {
+  width: 100%;
+  height: 100% !important;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+  /* margin-right: 20px; */
+  float: left;
+  border-radius: 0 !important;
+  .progress-bar {
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+  }
+}
+
+
+.carousel.slide .carousel-inner .carousel-item {
+  max-height: 250px;
+  overflow: hidden;
+  img {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+section {
+  &.animation-jotapizzas .img {
+    display: flex;
+    justify-content: center;
+  }
+  &.team {
+    padding: 50px 0;
+  }
+  &.history {
+    padding: 50px 0;
+    background-color: black;
+  }
+}
+
+/*Section History*/
+
+footer {
+  background-color: black;
+  padding: 15px 0;
+  font-size: 14px;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    span {
+      display: block;
+    }
+  }
+} //close-footer
+
+// .bg-custom{background-color:#000; justify-content:flex-end !important; outline:none;
+//   .custom-toggler{outline:none;
+//     span{
+//       &.navbar-toggler-icon{background-image: url(("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")); outline:none; border:0;}
+//     }
+//   }
+//   .navbar-collapse{
+//     .navbar-nav{
+//       li{
+//         a.nav-link{color:#fff; text-transform:uppercase; font-family: 'Staatliches', cursive; font-size: 20px; letter-spacing:1px;
+//           &:hover{color:#CF220B;}
+//         }
+//       }
+//     }//close-navbar
+  
+//   }//close-navbar-collapse
+// }//close-bg-custom
