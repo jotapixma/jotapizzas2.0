@@ -1,18 +1,19 @@
 section.pizzas-custom {
   .items-container {
     .right-side {
-      .detalle-pizza-container {
-        padding-top: 30px;
-      }
-      .detalle-pizza {
-        border: 1px solid black;
-        height: 100%;
-        padding: 20px;
-      }
+      
     }
-    .detalle-pizza h6 {
-      text-align: center;
+    .detalle-pizza-container {
+      padding-top: 30px;
     }
+    .detalle-pizza {
+      border: 1px solid black;
+      height: 100%;
+      padding: 20px;
+
+      h6{text-align: center;}
+    }
+   
     .detalle-pizza-container .detalle-pizza {
       border: 1px solid black;
       height: 100%;

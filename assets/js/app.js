@@ -17,10 +17,10 @@ var app = new Vue({
       {name: 'Salame', img:'assets/images/salami.png', precio: '6500'},
       
     ],
-    selectedIngredients:[],
+    // selectedIngredients:[],
     pizzas:[
     ],
-
+    factura: [],
     nameUser: true,
     persona: "",
     cantidad: 0,
@@ -35,6 +35,7 @@ var app = new Vue({
     armarSiguientePizza(){
       this.selectedPizza=this.pizzas[++this.idPizzaSelected];
       this.armarPizza=true;
+      this.selectedPizza.ingredientes = [];
     },
     ingredienteIsInPizza(ingrediente){
       return !!this.selectedPizza.ingredientes.find(ingredienteDeLaPizza=>ingredienteDeLaPizza.name===ingrediente.name
@@ -91,13 +92,19 @@ var app = new Vue({
         else {
          alert(message = "Gracias! has completado tu pizza"); 
          this.barraDeliciosidad = 0;
+        //  this.selectedPizza.ingredientes = [];
+          this.cantidad = 0;
+          this.armarSiguientePizza ();
         }
         return message;
-       
+        
       }
       if (this.cantidad == 5){
         alert("Felicidades! Has terminado de armar tu pizza");
         this.barraDeliciosidad = 0;
+        // this.selectedPizza.ingredientes = [];
+        this.cantidad = 0;
+        this.armarSiguientePizza ();
       }
 
     },
@@ -158,18 +165,18 @@ var app2 = new Vue({
       {name: 'Jotapizza', description:'', img:'assets/images/pizza-margarita.jpg', precio: '1$'},
       {name: 'Calzone', description:'', img:'assets/images/pizza-margarita.jpg', precio: '1$'}
     ],
-    selectedIngredients:[],
+    // selectedIngredients:[],
     message: "Esto es una prueba",
     newIngredient: ''
-  },
-  methods: {
-    agregarIngrediente: function(ingrediente){
-      const selectedingred=this.selectedIngredients.find(ingred=>ingred.name===ingrediente.name);
-      if(!selectedingred){
-        this.selectedIngredients.push(ingrediente);
-      }
-    }
   }
+  // methods: {
+  //   agregarIngrediente: function(ingrediente){
+  //     const selectedingred=this.selectedIngredients.find(ingred=>ingred.name===ingrediente.name);
+  //     if(!selectedingred){
+  //       this.selectedIngredients.push(ingrediente);
+  //     }
+  //   }
+  // }
   
 });
 

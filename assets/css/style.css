@@ -3,11 +3,11 @@ body {
 }
 
 /*** Mixins ***/
-section.pizzas-custom .items-container .right-side .detalle-pizza-container {
+section.pizzas-custom .items-container .detalle-pizza-container {
   padding-top: 30px;
 }
 
-section.pizzas-custom .items-container .right-side .detalle-pizza {
+section.pizzas-custom .items-container .detalle-pizza {
   border: 1px solid black;
   height: 100%;
   padding: 20px;

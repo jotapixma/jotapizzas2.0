@@ -200,10 +200,10 @@
     </div>
     
     <!-- Factura - Detalle de compra -->
-    <div class="col-lg-8 col-8 order-4 order-lg-4 detalle-pizza-container">
+    <div class="col-lg-6 col-8 order-4 order-lg-4 detalle-pizza-container">
       <div class="detalle-pizza">
         <div class="d-flex justify-content-center align-items-center">
-          <h6> Pizza {{ persona }}</h6>
+          <h6> Detalle Pizza </h6>
           <div v-show="nameUser != true">
             <button class="btn btn-sm btn-warning" v-on:click="editUser">edit</button>
           </div>
@@ -213,14 +213,14 @@
             <span> - Ingrediente </span>
             <ul id="pizza-detail">
               <!-- <li v-for="ingredient in ingredients"> {{ingredient.name}} </li> -->
-              <li v-for="ingredient in selectedIngredients">
+              <li v-for="ingredient in selectedPizza.ingredientes">
                 {{ingredient.name}}
               </li>
             </ul>
           </div>
           <div class="col-lg-4 col-6 cantidad-pizza d-flex flex-column">
             <span> - Precio </span>
-            <li v-for="ingredient in selectedIngredients">
+            <li v-for="ingredient in selectedPizza.ingredientes">
               {{ingredient.precio}}
             </li>
           </div>
@@ -230,6 +230,37 @@
         <h4>El total de su pedido es de: {{sumarPrecio}} $ </h4>
       </div>
     </div> 
+    <div class="col-lg-6 order-lg-5">
+      <div class="detalle-pizza-container">
+        <div class="detalle-pizza">
+          <div v-for="pizza in pizzas">
+            <div class="text-center">
+              <h4>Detalle Pedido JotaPizzas {{ persona }}</h4>
+              <span> - Pizza nro {{pizzas[POSITION]}} </span>
+              <span> - Tamaño {{ pizza.size }}</span>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-6 ingrediente-pizza d-flex flex-column">
+                <span> - Ingredientes </span>
+                <ul id="pizza-detail">
+                  <li v-for="ingredient in pizza.ingredientes">
+                    {{ingredient.name}}
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-6 cantidad-pizza d-flex flex-column">
+                <span> - Precio </span>
+                <li v-for="ingredient in pizza.ingredientes">
+                  {{ingredient.precio}}
+                </li>
+              </div>
+            </div>
+            <h6>El subtotal de su pedido es de: XXX </h6>
+          </div>
+          <h6>El total de su pedido es de XYZ</h6>
+        </div>
+      </div>
+    </div>
     
   </div> <!-- close d-flex -->
 </div>
